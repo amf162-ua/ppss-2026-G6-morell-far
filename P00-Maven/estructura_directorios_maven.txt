@@ -1,0 +1,14 @@
+P00-maven1
+├── pom.xml
+└── src
+    ├── main
+    │   ├── java
+    │   │   └── paquete1
+    │   │       ├── Matricula.java
+    │   │       └── Triangulo.java
+    │   └── resources
+    └── test
+        └── java
+            └── paquete1
+                ├── MatriculaTest.java
+                └── TrianguloTest.java
