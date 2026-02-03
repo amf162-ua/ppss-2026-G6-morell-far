@@ -26,7 +26,7 @@ En esta práctica se trabajó con proyectos Maven para familiarizarse con la est
    - Se creó un archivo de texto `comandos_maven.txt` para registrar la secuencia de acciones realizadas por Maven durante la ejecución de los comandos `mvn compile`, `mvn clean` y `mvn test`.
 
 ## Resumen de la práctica P01 - Uso de IntelliJ
-###***Ejercicio 1***
+### **Ejercicio 1**
 PACKAGE
 Ejecuta hasta package
 Genera un .jar
