@@ -26,22 +26,26 @@ En esta práctica se trabajó con proyectos Maven para familiarizarse con la est
    - Se creó un archivo de texto `comandos_maven.txt` para registrar la secuencia de acciones realizadas por Maven durante la ejecución de los comandos `mvn compile`, `mvn clean` y `mvn test`.
 
 ## Resumen de la práctica P01 - Uso de IntelliJ
-### **Ejercicio 1**
-PACKAGE
-Ejecuta hasta package
-Genera un .jar
-Lo deja en:
+
+### Ejercicio 1
+
+#### Fase PACKAGE
+- Ejecuta todas las fases hasta `package`
+- Genera un archivo `.jar`
+- El artefacto se crea en:
+
 target/
 
-INSTALL
-Ejecuta hasta install
-Copia el .jar al:
+
+#### Fase INSTALL
+- Ejecuta todas las fases hasta `install`
+- Copia el `.jar` al repositorio local de Maven:
+
 ~/.m2/repository
 
-¿Para qué sirve?
 
-Reutilizar tu proyecto como dependencia
-Evitar copiar librerías a mano
-
-Base del desarrollo modular con Maven
+#### ¿Para qué sirve?
+- Reutilizar tu proyecto como dependencia en otros proyectos Maven
+- Evitar copiar librerías manualmente
+- Base del desarrollo modular con Maven
 
