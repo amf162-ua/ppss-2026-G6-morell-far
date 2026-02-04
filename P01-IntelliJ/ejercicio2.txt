@@ -1,0 +1,51 @@
+EJERCICIO 2:
+
+- Comportamientos que pertenecen al conjunto S:
+	(1) (29,2,2024)-> true
+	(2) (29,2,2023)-> false
+	(3) (31,4,2023)-> false
+
+- Comportamientos que pertenecen al conjunto P:	
+        (1) (29,2,2024)-> true
+		(2) (29,2,2023)-> false
+
+- Comportamientos que pertenecen a T
+   (1)
+   @Test
+   void C1_fechaValida_should_be_false_when_date_is_29_2_2023() {
+        //Preparamos los datos (Arrange)
+        int dia = 29;
+        int mes = 2;
+        int anyo = 2023;
+        boolean resultadoEsperado = false;
+        //Ejecutamos (Act)
+        boolean resultadoReal = ejemplo.fechaValida(dia,mes,anyo);
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+    
+    (2) 
+    @Test
+    void C1_fechaValida_should_be_true_when_date_is_29_2_2024() {
+        //Preparamos los datos (Arrange)
+        int dia = 29;
+        int mes = 2;
+        int anyo = 2024;
+        boolean resultadoEsperado = true;
+        //Ejecutamos (Act)
+        boolean resultadoReal = ejemplo.fechaValida(dia,mes,anyo);
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+    
+    (3)
+    @Test
+    void C1_fechaValida_should_be_false_when_date_is_31_4_2023() {
+        //Preparamos los datos (Arrange)
+        int dia = 31;
+        int mes = 4;
+        int anyo = 2023;
+        boolean resultadoEsperado = false;
+        //Ejecutamos (Act)
+        boolean resultadoReal = ejemplo.fechaValida(dia,mes,anyo);
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+   

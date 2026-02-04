@@ -8,7 +8,7 @@ public class Ejemplo {
 
         if (mes >= 1  &&  mes <= 12) {
             switch (mes) {
-                case 1: case 3: case 5: case 7: case 10: case 12:
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
                     valor_maximo_dia = 31;
                     break;
                 case 4: case 6: case 9: case 11:
@@ -28,5 +28,12 @@ public class Ejemplo {
             }
         }
         return es_valida;
+    }
+
+    public static void main(String args[]){
+        Ejemplo e = new Ejemplo();
+        System.out.println(e.fechaValida(29, 2, 2024));
+        System.out.println(e.fechaValida(29, 2, 2023));
+        System.out.println(e.fechaValida(31, 4, 2024));
     }
 }
