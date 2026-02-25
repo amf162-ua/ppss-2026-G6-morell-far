@@ -43,12 +43,12 @@ class FicheroTextoTest {
     @Test
     @Tag("excluido")
     void C3_contarCaracteres_should_return_Exception_when_file_cannot_be_read(){
-        Assertions.fail("Test pendiente de implementar");
+        fail();
     }
 
     @Test
     @Tag("excluido")
     void C4_contarCaracteres_should_return_Exception_when_file_cannot_be_closed(){
-        Assertions.fail("Test pendiente de implementar");
+        fail();
     }
 }
