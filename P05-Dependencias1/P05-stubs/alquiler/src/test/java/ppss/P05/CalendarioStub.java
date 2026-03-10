@@ -1,6 +1,4 @@
 package ppss.P05;
-import jdk.vm.ci.meta.Local;
-
 import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -46,7 +44,7 @@ class CalendarioStub extends Calendario{
     @Override
     public boolean es_festivo(LocalDate dia) throws CalendarioException {
         if(excepciones.contains(dia)){
-            throw new CalendarioException("Error en dia: " + dia.toString());
+            throw new CalendarioException();
         }
         return mapa.getOrDefault(dia, false);
     }
