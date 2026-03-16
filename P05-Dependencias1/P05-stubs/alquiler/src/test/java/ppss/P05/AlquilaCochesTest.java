@@ -10,9 +10,8 @@ class AlquilaCochesTest {
     void C1_calculaPrecio_should_return_ticket_with_price_75_when_no_days_are_holidays() throws MensajeException {
 
         // Arrange
-        CalendarioStub calendarioStub = new CalendarioStub();
-        IService servicioStub = new ServicioStub();
-        AlquilaCochesTestable sut = new AlquilaCochesTestable(calendarioStub, servicioStub);
+        Calendario calendarioStub = new CalendarioStub();
+        AlquilaCochesTestable sut = new AlquilaCochesTestable(calendarioStub);
 
         TipoCoche tipo = TipoCoche.TURISMO;
         LocalDate fechaInicio = LocalDate.of(2024,5,18);
@@ -30,12 +29,11 @@ class AlquilaCochesTest {
     }
 
     @Test
-    void C1_calculaPrecio_should_return_ticket_with_price_62_5_when_just_2_days_are_holidays() throws MensajeException {
-
+    void C2_calculaPrecio_should_return_ticket_with_price_62_5_when_just_2_days_are_holidays() throws MensajeException {
+        Calendario calendario = new CalendarioStub();
         // Arrange
-        CalendarioStub calendarioStub = new CalendarioStub();
-        IService servicioStub = new ServicioStub();
-        AlquilaCochesTestable sut = new AlquilaCochesTestable(calendarioStub, servicioStub);
+        AlquilaCochesTestable sut = new AlquilaCochesTestable(calendario);
+
 
         TipoCoche tipo = TipoCoche.CARAVANA;
         LocalDate fechaInicio = LocalDate.of(2024,6,19);
@@ -49,16 +47,15 @@ class AlquilaCochesTest {
         Ticket resultado = sut.calculaPrecio(tipo, fechaInicio, dias);
 
         // Assert
-        assertEquals(62,5, resultado.getPrecio_final());
+        assertEquals(62.5f, resultado.getPrecio_final());
     }
 
     @Test
     void C3_calculaPrecio_should_throw_mensajeException_when_some_days_fail() {
 
         // Arrange
-        CalendarioStub calendarioStub = new CalendarioStub();
-        ServicioStub servicioStub = new ServicioStub(); // precio fijo 10€
-        AlquilaCochesTestable sut = new AlquilaCochesTestable(calendarioStub, servicioStub);
+        Calendario calendarioStub = new CalendarioStub();
+        AlquilaCochesTestable sut = new AlquilaCochesTestable(calendarioStub);
 
         TipoCoche tipo = TipoCoche.TURISMO;
         LocalDate fechaInicio = LocalDate.of(2024,4,17);

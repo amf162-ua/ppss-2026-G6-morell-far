@@ -4,12 +4,16 @@ import java.time.LocalDate;
 public class AlquilaCoches {
     protected Calendario calendario = new Calendario();
 
+    protected IService createServicio(){
+        return new Servicio();
+    }
+
     public Ticket calculaPrecio(TipoCoche tipo, LocalDate inicio, int ndias) throws MensajeException {
         Ticket ticket = new Ticket();
         float precioDia, precioTotal = 0.0f;
         float porcentaje = 0.25f;
         String observaciones = "";
-        IService servicio = new Servicio();
+        IService servicio = createServicio();
         precioDia = servicio.consultaPrecio(tipo);
         for (int i = 0; i < ndias; i++) {
             LocalDate otroDia = inicio.plusDays((long) i);
